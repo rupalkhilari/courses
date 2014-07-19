@@ -58,7 +58,7 @@ public class Point implements Comparable<Point> {
             if (that.y > this.y) m = Double.POSITIVE_INFINITY;
             else m = Double.NEGATIVE_INFINITY;
         else
-            m = (double)(that.y - this.y)/(double)(that.x - this.x);
+            m = (double) (that.y - this.y)/(double) (that.x - this.x);
         return m;
         
     }
@@ -104,12 +104,8 @@ public class Point implements Comparable<Point> {
         q = new Point(9, 4);
         r = new Point(8, 5);
         assert p.SLOPE_ORDER.compare(q, r) == 1;
-        assert p.slopeTo(q)    == -1.0;
-        assert p.slopeTo(r)    == Double.NEGATIVE_INFINITY;
-        
-        StdOut.println("A new test");
-        p = new Point(1234, 5678);
-        q = new Point(19000, 10000);
-        StdOut.println(p.slopeTo(q));
+        assert p.slopeTo(q) == -1.0;
+        assert p.slopeTo(r) == Double.NEGATIVE_INFINITY;
+
     }
 }
